@@ -1,0 +1,16 @@
+C:\Users\nisse\source\repos\Primtal\Primtal\bin\Debug\net5.0\Primtal.exe
+C:\Users\nisse\source\repos\Primtal\Primtal\bin\Debug\net5.0\Primtal.deps.json
+C:\Users\nisse\source\repos\Primtal\Primtal\bin\Debug\net5.0\Primtal.runtimeconfig.json
+C:\Users\nisse\source\repos\Primtal\Primtal\bin\Debug\net5.0\Primtal.runtimeconfig.dev.json
+C:\Users\nisse\source\repos\Primtal\Primtal\bin\Debug\net5.0\Primtal.dll
+C:\Users\nisse\source\repos\Primtal\Primtal\bin\Debug\net5.0\ref\Primtal.dll
+C:\Users\nisse\source\repos\Primtal\Primtal\bin\Debug\net5.0\Primtal.pdb
+C:\Users\nisse\source\repos\Primtal\Primtal\obj\Debug\net5.0\Primtal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nisse\source\repos\Primtal\Primtal\obj\Debug\net5.0\Primtal.AssemblyInfoInputs.cache
+C:\Users\nisse\source\repos\Primtal\Primtal\obj\Debug\net5.0\Primtal.AssemblyInfo.cs
+C:\Users\nisse\source\repos\Primtal\Primtal\obj\Debug\net5.0\Primtal.csproj.CoreCompileInputs.cache
+C:\Users\nisse\source\repos\Primtal\Primtal\obj\Debug\net5.0\Primtal.dll
+C:\Users\nisse\source\repos\Primtal\Primtal\obj\Debug\net5.0\ref\Primtal.dll
+C:\Users\nisse\source\repos\Primtal\Primtal\obj\Debug\net5.0\Primtal.pdb
+C:\Users\nisse\source\repos\Primtal\Primtal\obj\Debug\net5.0\Primtal.genruntimeconfig.cache
+C:\Users\nisse\source\repos\Primtal\Primtal\obj\Debug\net5.0\Primtal.csproj.AssemblyReference.cache
