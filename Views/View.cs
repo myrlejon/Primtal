@@ -1,14 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Primtal
 {
+    // Everything that is displayed in the console can be found in this class.
     public class View
     {
+        // This method is where everything is put together.
         public static void Menu()
         {
-            string spacing = "                        ";
             var primeController = new Controllers.PrimeController();
             var view = new View();
+            var prime = new Prime();
+            prime.primeList = new List<int>();
 
             Console.SetWindowSize(50, 25);
             Console.Clear();
@@ -17,10 +21,10 @@ namespace Primtal
             while (menuLoop)
             {
                 view.PrintMenu();
-                Console.Write(spacing);
+                Console.Write("                        ");
                 string input = Console.ReadLine();
 
-                //TODO: Lägg till en try catch som kollar om det är 0, negativt eller en sträng
+                // This option lets the user add a prime by input.
                 if (input == "1")
                 {
                     int primeInt = primeController.AcceptableInput();
@@ -28,6 +32,7 @@ namespace Primtal
                     if (primeController.AddPrime(primeInt))
                     {
                         view.PrintMenu();
+                        prime.primeList.Add(primeInt);
                         Console.WriteLine($"{primeInt} has been added to the data structure.");
                         Console.ReadLine();
                     }
@@ -39,15 +44,58 @@ namespace Primtal
                     }
                 }
 
+                // This option adds the next prime to the data structure.
                 else if (input == "2")
                 {
+                    int nextPrime = primeController.AddNextPrime(prime.primeList);
+                    // If the data structure is empty, the program will enter the first prime (2) to the data structure.
+                    if (nextPrime == 0)
+                    {
+                        view.PrintMenu();
+                        prime.primeList.Add(2);
+                        Console.WriteLine($"Added {nextPrime} to the data structure.");
+                    }
+                    else
+                    {
+                        view.PrintMenu();
+                        prime.primeList.Add(nextPrime);
+                        Console.WriteLine($"Added {nextPrime} to the data structure.");
+                    }
+                    Console.ReadLine();
                 }
+
+                // This option displays the data structure.
                 else if (input == "3")
                 {
+                    if (prime.primeList.Count == 0)
+                    {
+                        view.PrintMenu();
+                        Console.WriteLine("You need to add some prime numbers first!");
+                    }
+
+                    else
+                    {
+                        int lineBreak = 0;
+
+                        Console.Clear();
+                        foreach (var number in prime.primeList)
+                        {
+                            Console.Write($"|{number}| ");
+                            lineBreak += 10;
+
+                            if (lineBreak >= 40)
+                            {
+                                Console.WriteLine();
+                                lineBreak = 0;
+                            }
+                        }
+                    }
+                    Console.ReadLine();
                 }
             }
         }
 
+        // This method prints out the menu in the console.
         public void PrintMenu()
         {
             Console.Clear();

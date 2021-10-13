@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Primtal.Controllers
 {
+    // This class provides methods that are useful for deciding if the user input is a prime or not.
     public class PrimeController
     {
-
         // This method checks for prime numbers.
         public bool AddPrime(int prime)
         {
@@ -26,19 +26,17 @@ namespace Primtal.Controllers
                 {
                     isPrime = false;
                 }
-                else if (prime <= 0)
-                {
-                    isPrime = false;
-                }
-                else if (prime == 1)
-                {
-                    isPrime = false;
-                }
             }
+
+            if (prime == 1 || prime == 0)
+            {
+                isPrime = false;
+            }
+
             return isPrime;
         }
 
-        // This method checks if the user input is valid
+        // This method checks if the user input is valid.
         public int AcceptableInput()
         {
             var view = new View();
@@ -70,5 +68,28 @@ namespace Primtal.Controllers
             }
             return number;
         }
+
+        // This method adds the following prime number in the data structure.
+        public int AddNextPrime(List<int> primeList)
+        {
+            int prime = 0;
+
+            if (primeList.Count > 0)
+            {
+                prime = primeList.Max();
+                bool searchPrime = true;
+                
+                while (searchPrime)
+                {
+                    prime++;
+                    if (AddPrime(prime))
+                    {
+                        break;
+                    }
+                }
+            }
+            return prime;
+        }
+
     }
 }

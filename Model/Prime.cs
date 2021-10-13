@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace Primtal
 {
+    // This class is used for storing primes in a list.
     class Prime
     {
-        public int prime;
-        public int[] primeArray;
+        public List<int> primeList;
 
-        public Prime(int primeNum, int[] primeArrayNum)
+        public Prime(List<int> primeListNum)
         {
-            prime = primeNum;
-            primeArray = primeArrayNum;
+            primeList = primeListNum;
         }
 
         public Prime()
